@@ -1,0 +1,36 @@
+{
+  "name": "bs-nprogress",
+  "version": "0.0.0",
+  "description": "BuckleScript bindings to nprogress",
+  "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
+  "license": "MIT",
+  "main": "src/NProgress.bs.js",
+  "scripts": {
+    "start": "bsb -clean-world -make-world -w",
+    "build": "bsb -clean-world -make-world",
+    "clean": "bsb -clean-world",
+    "test": "exit 0"
+  },
+  "peerDependencies": {
+    "nprogress": "^0.2.0"
+  },
+  "devDependencies": {
+    "bs-platform": "2.1.0",
+    "nprogress": "0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexfedoseev/bs-nprogress.git"
+  },
+  "files": [
+    "src",
+    "bsconfig.json"
+  ],
+  "keywords": [
+    "nprogress",
+    "reason",
+    "reasonml",
+    "ocaml",
+    "bucklescript"
+  ]
+}
