@@ -12,10 +12,11 @@
     "test": "exit 0"
   },
   "peerDependencies": {
+    "bs-platform": "^2.2.2",
     "nprogress": "^0.2.0"
   },
   "devDependencies": {
-    "bs-platform": "2.1.0",
+    "bs-platform": "2.2.2",
     "nprogress": "0.2.0"
   },
   "repository": {
