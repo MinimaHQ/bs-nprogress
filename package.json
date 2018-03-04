@@ -1,6 +1,6 @@
 {
   "name": "bs-nprogress",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "BuckleScript bindings to nprogress",
   "author": "Alex Fedoseev <alex.fedoseev@gmail.com>",
   "license": "MIT",
