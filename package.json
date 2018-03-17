@@ -9,6 +9,7 @@
     "start": "bsb -clean-world -make-world -w",
     "build": "bsb -clean-world -make-world",
     "clean": "bsb -clean-world",
+    "refmt": "find -E . -regex '.+\\.rei?' -exec refmt --in-place {} \\;",
     "test": "exit 0"
   },
   "peerDependencies": {
