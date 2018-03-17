@@ -25,13 +25,13 @@ type jsConfig = {
   "trickle": Js.nullable(Js.boolean),
   "trickleSpeed": Js.nullable(int),
   "showSpinner": Js.nullable(Js.boolean),
-  "parent": Js.nullable(string)
+  "parent": Js.nullable(string),
 };
 
 [@bs.module "nprogress"] external configure : jsConfig => unit = "";
 
 let toNullableJsBoolean = maybeBool =>
-  switch maybeBool {
+  switch (maybeBool) {
   | Some(boolean) => Some(boolean |> Js.Boolean.to_js_boolean)
   | None => None
   };
@@ -46,7 +46,7 @@ let configure =
       ~trickleSpeed: option(int)=?,
       ~showSpinner: option(bool)=?,
       ~parent: option(string)=?,
-      _
+      _,
     ) =>
   configure({
     "minimum": minimum |> Js.Nullable.fromOption,
@@ -55,6 +55,7 @@ let configure =
     "speed": speed |> Js.Nullable.fromOption,
     "trickle": trickle |> toNullableJsBoolean |> Js.Nullable.fromOption,
     "trickleSpeed": trickleSpeed |> Js.Nullable.fromOption,
-    "showSpinner": showSpinner |> toNullableJsBoolean |> Js.Nullable.fromOption,
-    "parent": parent |> Js.Nullable.fromOption
+    "showSpinner":
+      showSpinner |> toNullableJsBoolean |> Js.Nullable.fromOption,
+    "parent": parent |> Js.Nullable.fromOption,
   });
