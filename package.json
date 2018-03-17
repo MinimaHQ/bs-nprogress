@@ -10,7 +10,8 @@
     "build": "bsb -clean-world -make-world",
     "clean": "bsb -clean-world",
     "refmt": "find -E . -regex '.+\\.rei?' -exec refmt --in-place {} \\;",
-    "test": "exit 0"
+    "test": "exit 0",
+    "preversion": "yarn run clean && yarn run refmt"
   },
   "peerDependencies": {
     "bs-platform": "^2.2.2",
