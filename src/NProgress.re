@@ -2,7 +2,7 @@
 
 [@bs.module "nprogress"] external complete : unit => unit = "done";
 
-[@bs.module "nprogress"] external forceComplete : Js.boolean => unit = "done";
+[@bs.module "nprogress"] external forceComplete : bool => unit = "done";
 
 [@bs.module "nprogress"] external isStarted : unit => bool = "";
 
@@ -14,7 +14,7 @@
 
 [@bs.module "nprogress"] external status : float = "";
 
-let forceComplete = () => forceComplete(Js.true_);
+let forceComplete = () => true |> forceComplete;
 
 type jsConfig = {
   .
@@ -22,19 +22,13 @@ type jsConfig = {
   "template": Js.nullable(string),
   "easing": Js.nullable(string),
   "speed": Js.nullable(int),
-  "trickle": Js.nullable(Js.boolean),
+  "trickle": Js.nullable(bool),
   "trickleSpeed": Js.nullable(int),
-  "showSpinner": Js.nullable(Js.boolean),
+  "showSpinner": Js.nullable(bool),
   "parent": Js.nullable(string),
 };
 
 [@bs.module "nprogress"] external configure : jsConfig => unit = "";
-
-let toNullableJsBoolean = maybeBool =>
-  switch (maybeBool) {
-  | Some(boolean) => Some(boolean |> Js.Boolean.to_js_boolean)
-  | None => None
-  };
 
 let configure =
     (
@@ -53,9 +47,8 @@ let configure =
     "template": template |> Js.Nullable.fromOption,
     "easing": easing |> Js.Nullable.fromOption,
     "speed": speed |> Js.Nullable.fromOption,
-    "trickle": trickle |> toNullableJsBoolean |> Js.Nullable.fromOption,
+    "trickle": trickle |> Js.Nullable.fromOption,
     "trickleSpeed": trickleSpeed |> Js.Nullable.fromOption,
-    "showSpinner":
-      showSpinner |> toNullableJsBoolean |> Js.Nullable.fromOption,
+    "showSpinner": showSpinner |> Js.Nullable.fromOption,
     "parent": parent |> Js.Nullable.fromOption,
   });
