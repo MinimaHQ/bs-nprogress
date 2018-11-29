@@ -5,7 +5,6 @@
   ],
   "reason": true,
   "refmt": 3,
-  "bsc-flags": ["-bs-super-errors"],
   "package-specs": {
     "module": "commonjs",
     "in-source": true,

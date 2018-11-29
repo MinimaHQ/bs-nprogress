@@ -2,10 +2,12 @@
 # yarn lockfile v1
 
 
-bs-platform@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-3.0.0.tgz#38f200730db52fdea37819376b6ac3dfb20244c0"
+bs-platform@4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.7.tgz#1a0bbf0fef439fef5f1a88ba60d5ac8a6d73570c"
+  integrity sha512-39ZXSugB03PznE7eSVwxq5z4S8Cn44r22T2eFd7rgFQ94HaB/mCNHXG0epF3mJLYhhhyPT9w3e/t+FAIjSdAkg==
 
 nprogress@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
