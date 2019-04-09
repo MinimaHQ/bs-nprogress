@@ -1,3 +1,6 @@
+# 5.0.0
+* **[ BREAKING ]** `bs-platform` updated to `5.0.0`.
+
 # 4.0.0
 * **[ BREAKING ]** `bs-platform` updated to `4.0.0`.
 * Added `NProgress.incBy`.
