@@ -1,3 +1,6 @@
+# 5.1.0
+* `bs-platform` updated to `7.0.1`.
+
 # 5.0.0
 * **[ BREAKING ]** `bs-platform` updated to `5.0.0`.
 

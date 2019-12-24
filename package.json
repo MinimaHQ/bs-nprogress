@@ -14,11 +14,10 @@
     "preversion": "yarn run clean && yarn run refmt"
   },
   "peerDependencies": {
-    "bs-platform": "^5.0.0",
     "nprogress": "^0.2.0"
   },
   "devDependencies": {
-    "bs-platform": "5.0.0",
+    "bs-platform": "7.0.1",
     "nprogress": "0.2.0"
   },
   "repository": {

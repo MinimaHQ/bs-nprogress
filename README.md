@@ -13,7 +13,7 @@ npm install --save bs-nprogress nprogress
 Pretty much consistent with [original JS API](https://github.com/rstacruz/nprogress#basic-usage).
 
 ```reason
-/* All arguments are optional */
+// All arguments are optional
 NProgress.configure(
   ~minimum=0.2,
   ~template="<div />"
@@ -23,14 +23,14 @@ NProgress.configure(
   ~trickleSpeed=300,
   ~showSpinner=false,
   ~parent="#container",
-  () /* NB: Don't forget to apply unit! */
+  () // NB: Don't forget to apply unit!
 );
 
 NProgress.start();
 
-NProgress.complete(); /* original: NProgress.done(); */
+NProgress.complete(); // original: NProgress.done();
 
-NProgress.forceComplete(); /* original: NProgress.done(true); */
+NProgress.forceComplete(); // original: NProgress.done(true);
 
 NProgress.isStarted();
 

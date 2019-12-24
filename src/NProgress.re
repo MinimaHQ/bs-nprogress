@@ -1,12 +1,12 @@
-[@bs.module "nprogress"] external start: unit => unit = "";
+[@bs.module "nprogress"] external start: unit => unit = "start";
 [@bs.module "nprogress"] external complete: unit => unit = "done";
 [@bs.module "nprogress"] external forceComplete: bool => unit = "done";
-[@bs.module "nprogress"] external isStarted: unit => bool = "";
-[@bs.module "nprogress"] external set: float => unit = "";
-[@bs.module "nprogress"] external inc: unit => unit = "";
+[@bs.module "nprogress"] external isStarted: unit => bool = "isStarted";
+[@bs.module "nprogress"] external set: float => unit = "set";
+[@bs.module "nprogress"] external inc: unit => unit = "inc";
 [@bs.module "nprogress"] external incBy: float => unit = "inc";
-[@bs.module "nprogress"] external remove: unit => unit = "";
-[@bs.module "nprogress"] external status: float = "";
+[@bs.module "nprogress"] external remove: unit => unit = "remove";
+[@bs.module "nprogress"] external status: float = "status";
 
 let forceComplete = () => true->forceComplete;
 
@@ -22,7 +22,7 @@ type jsConfig = {
   "parent": Js.nullable(string),
 };
 
-[@bs.module "nprogress"] external configure: jsConfig => unit = "";
+[@bs.module "nprogress"] external configure: jsConfig => unit = "configure";
 
 let configure =
     (
